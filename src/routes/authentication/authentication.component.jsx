@@ -1,13 +1,14 @@
 import SignIn from '../../components/sign-in/sign-in.component'
 import SignUp from '../../components/sign-up/sign-up.component'
-import './authentication.styles.scss'
+
+import { AuthenticationContainer } from './authentication.styles';
 
 const Authentication = () => {
 	return (
-		<div className='authentication-container'>
-		<SignIn />
-		<SignUp />
-		</div>
+    <AuthenticationContainer>
+      <SignIn />
+      <SignUp />
+    </AuthenticationContainer>
 	)
 }
 

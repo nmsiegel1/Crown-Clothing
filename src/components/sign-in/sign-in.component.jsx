@@ -1,10 +1,10 @@
 import { useState} from "react"
 
 import { signInWithGooglePopup, signAuthUserInWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 import FormInput from "../form-input/form-input.componet";
 
-import './sign-in.styles.scss'
+import { SignInContainer, ButtonsContainer } from './sign-in.styles';
 
 const defaultFormFields = {
 	email: '',
@@ -52,32 +52,39 @@ const SignIn = () => {
 	}
 
 	return (
-		<div className="sign-up-container">
-			<h2>Already have an account?</h2>
-			<span>Sign in with your email and password</span>
-			<form onSubmit={handleSubmit}>
-				<FormInput
-					label="email"
-					name="email"
-					onChange={handleChange}
-					required
-					type="email"
-					value={email}
-				/>
-				<FormInput
-					label="password"
-					name="password"
-					onChange={handleChange}
-					required
-					type="password"
-					value={password}
-				/>
-				<div className="buttons-container">
-				<Button type="submit">Sign In</Button>
-				<Button type='button' buttonType='google' onClick={signInWithGoogle}>Google Sign In</Button>
-				</div>
-			</form>
-		</div>
+<SignInContainer>
+      <h2>Already have an account?</h2>
+      <span>Sign in with your email and password</span>
+      <form onSubmit={handleSubmit}>
+        <FormInput
+          label='Email'
+          type='email'
+          required
+          onChange={handleChange}
+          name='email'
+          value={email}
+        />
+
+        <FormInput
+          label='Password'
+          type='password'
+          required
+          onChange={handleChange}
+          name='password'
+          value={password}
+        />
+        <ButtonsContainer>
+          <Button type='submit'>Sign In</Button>
+          <Button
+            buttonType={BUTTON_TYPE_CLASSES.google}
+            type='button'
+            onClick={signInWithGoogle}
+          >
+            Sign In With Google
+          </Button>
+        </ButtonsContainer>
+      </form>
+    </SignInContainer>
 	)
 }
 
