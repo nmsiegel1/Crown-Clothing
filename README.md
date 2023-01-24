@@ -19,7 +19,7 @@ This is an e-commerce application made with ReactJs, Firebase authentication and
 
 ## Made-With
 
-- React 
+- React
 - Firebase
 
 Packages/Extras
@@ -33,10 +33,9 @@ Packages/Extras
 
 After cloning the repo, run `npm i` or `npm install` in the command line to install dependencies run `expo start` to launch the application.
 
-
 ## Features
 
-- <u>9 Pages</u> - Home, Shop, Hats, Jackets, Mens, Sneakers, Womens, Sign In, Checkout 
+- <u>9 Pages</u> - Home, Shop, Hats, Jackets, Mens, Sneakers, Womens, Sign In, Checkout
 
 - <u>Authentication</u> - Authentication is created through Firebase. The user may create an account with an email or with Google Authenticator.
 
@@ -44,14 +43,11 @@ After cloning the repo, run `npm i` or `npm install` in the command line to inst
 
 - <u>Checkout</u> - The cart items can be deleted or thier quantites updated on the checkout page
 
-
 ## Application
 
 https://euphonious-zuccutto-1165ba.netlify.app/shop
 
 ## Screenshots
-
-
 
 ## Liscense
 
@@ -60,6 +56,8 @@ This project is liscensed under the MIT liscense.
 ## Credits
 
 Made by Nina Siegel
+
+With help from the Complete React Developer course from Zero To Mastry
 
 ## Questions
 
